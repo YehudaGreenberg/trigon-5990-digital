@@ -1,68 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <link href="./manifest.json" rel="manifest"/>
-  <title>
-   Trigon 5990 
-  </title>
-  <script crossorigin="" src="./assets/index-BCRr73hq.js" type="module">
-  </script>
-  <link crossorigin="" href="./assets/index-CGcSn7Xv.css" rel="stylesheet"/>
-  <script type="module">
-   if (window.self === window.top) {
-  let lastPath = "";
-  function getPageNameFromPath(path) {
-    const segments = path.split("/").filter(Boolean);
-    return segments[0] || null;
-  }
-  function trackPageView() {
-    const path = window.location.pathname;
-    if (path === lastPath) return;
-    lastPath = path;
-    const pageName = getPageNameFromPath(path) || "home";
-    const appId = "69d1bc4cbc2d0e0e23bf61ae";
-    if (!appId) return;
-    fetch(`/app-logs/${appId}/log-user-in-app/${pageName}`, {
-      method: "POST",
-    }).catch(() => {});
-  }
-  const originalPushState = history.pushState.bind(history);
-  history.pushState = function (...args) {
-    originalPushState(...args);
-    trackPageView();
-  };
-  const originalReplaceState = history.replaceState.bind(history);
-  history.replaceState = function (...args) {
-    originalReplaceState(...args);
-    trackPageView();
-  };
-  window.addEventListener("popstate", trackPageView);
-  trackPageView();
-}
-  </script>
-  <meta content="The high-performance digital hub for the Trigon 5990 FRC robotics team, featuring robot specs, season timelines, and engineering resources." name="description"/>
-  <meta content="Trigon 5990 Digital" property="og:title"/>
-  <meta content="The high-performance digital hub for the Trigon 5990 FRC robotics team, featuring robot specs, season timelines, and engineering resources." property="og:description"/>
-  <meta content="https://media.base44.com/images/public/69d1bc4cbc2d0e0e23bf61ae/29279e95b_logo.png/v1/fill/w_1200,h_630/29279e95b_logo.png" property="og:image"/>
-  <meta content="https://trigon-5990-digital-23bf61ae.base44.app" property="og:url"/>
-  <meta content="website" property="og:type"/>
-  <meta content="Trigon 5990 Digital" property="og:site_name"/>
-  <meta content="Trigon 5990 Digital" name="twitter:title"/>
-  <meta content="The high-performance digital hub for the Trigon 5990 FRC robotics team, featuring robot specs, season timelines, and engineering resources." name="twitter:description"/>
-  <meta content="https://media.base44.com/images/public/69d1bc4cbc2d0e0e23bf61ae/29279e95b_logo.png/v1/fill/w_1200,h_630/29279e95b_logo.png" name="twitter:image"/>
-  <meta content="summary_large_image" name="twitter:card"/>
-  <meta content="https://trigon-5990-digital-23bf61ae.base44.app" name="twitter:url"/>
-  <meta content="yes" name="mobile-web-app-capable"/>
-  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
-  <meta content="Trigon 5990 Digital" name="apple-mobile-web-app-title"/>
-  <link href="https://trigon-5990-digital-23bf61ae.base44.app" rel="canonical"/>
-  <script async="true" data-app-id="69d1bc4cbc2d0e0e23bf61ae" data-platform-url="https://app.base44.com" src="./static/js/badge.js">
-  </script>
- </head>
- <body>
-  <div id="root">
-  </div>
- </body>
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <link href="./manifest.json" rel="manifest"/>
+    <title>Trigon 5990</title>
+    <script crossorigin="" src="./assets/index-BCRr73hq.js" type="module"></script>
+    <link crossorigin="" href="./assets/index-CGcSn7Xv.css" rel="stylesheet"/>
+    <meta content="The high-performance digital hub for the Trigon 5990 FRC robotics team, featuring robot specs, season timelines, and engineering resources." name="description"/>
+    <meta content="Trigon 5990 Digital" property="og:title"/>
+    <meta content="The high-performance digital hub for the Trigon 5990 FRC robotics team, featuring robot specs, season timelines, and engineering resources." property="og:description"/>
+    <meta content="website" property="og:type"/>
+    <meta content="Trigon 5990 Digital" property="og:site_name"/>
+    <meta content="Trigon 5990 Digital" name="twitter:title"/>
+    <meta content="The high-performance digital hub for the Trigon 5990 FRC robotics team, featuring robot specs, season timelines, and engineering resources." name="twitter:description"/>
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="yes" name="mobile-web-app-capable"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta content="Trigon 5990 Digital" name="apple-mobile-web-app-title"/>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
